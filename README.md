@@ -179,7 +179,7 @@ RTA(config-line)# exec-timeout 6
 
 ## Port security
 
-port must be an access port or a trunk port - switchport mode trunk
+port must be an access port or a trunk port - switchport mode access/trunk
 
 switch(config-if)# switchport port-security
 
