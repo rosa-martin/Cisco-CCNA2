@@ -188,8 +188,11 @@ switch(config-if)# switchport port-security mac-address sticky -> in case of dyn
 switch(config-if)# switchport port-security maximum 5 -> set max amount of MAC addresses
 
 switch(config-if)# switchport port-security violation [shutdown | restrict | protect] 
+  
   shutdown - vypne port
+  
   restrict - zahadzuje pakety a spravi syslog incidentu
+  
   protect - zahadzuje pakety
 
 
