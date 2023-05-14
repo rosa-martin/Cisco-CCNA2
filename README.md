@@ -18,17 +18,24 @@ To enable IPv6 routing, enter the command ipv6 unicast-routing.
 R1(config)# ipv6 unicast-routing
 
 ## IP route
+
 ip route [destination ip of network] [mask of ip of network] [next-hop address/outbounds interface of current router]
+
 ip route [destination ip of device] 255.255.255.255 [next-hop address/outbounds interface of current router]
 
 ## Trunks
 ### Put PC to vlan
+
 Set port to access mode - switchport mode access
+
 Set the vlan - switchport access vlan [id of vlan]
 
 ### Set trunk mode
+
 set int to trunk mode - switchport mode trunk
+
 if you have switch 3rd layer - switchport trunk encapsulation dot1q
+
 set native vlan for trunking - switchport trunk native vlan [id of vlan]
 
 ## Router-on-stick
