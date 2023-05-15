@@ -128,6 +128,39 @@ ip helper-address [address of the router where the dhcp server is present]
 
 Note: in the case the default gateway of the clients is on the relay agent router rahter than on the dhcp router, make sure it's set properly
 
+## DHCPv6
+### Stateless
+ipv6 dhcp pool [pool_name]
+
+dns-server 2001:db8:acad::254 (this address can be whatever)
+
+domain-name STATELESS.com (url can be whatever)
+
+int [interface/subinterface where the clients are connected to]
+
+ipv6 nd  other-config-flag (this specifies that the server is stateless)
+
+ipv6 dhcp server [pool_name]
+
+### Stateful
+ipv6 dhcp pool [pool_name]
+
+adress prefix [prefix from which the addresses will be from] (example - 2001:db8:acad:10::/64)
+
+dns-server 2001:db8:acad::254 (this address can be whatever)
+
+domain-name STATELESS.com (url can be whatever)
+
+int [interface/subinterface where the clients are]
+
+ipv6 dhcp server [pool_name]
+
+### DHCPv6 relay agent
+int [interface/subinteface wher the clients are]
+
+ipv6 nd managed-config-flag
+
+ipv6 dhcp relay destination [ip of the DHCP's interface] [outbounds interface (going to the DHCP server)]
 
 ## HSRP
 In case there are vlans present in the network put these on the subinterface (vlan interface, in case of a L3-switch) that would normaly have default-gateway
