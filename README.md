@@ -145,7 +145,7 @@ ipv6 dhcp server [pool_name]
 ### Stateful
 ipv6 dhcp pool [pool_name]
 
-adress prefix [prefix from which the addresses will be from] (example - 2001:db8:acad:10::/64)
+adress prefix [range where the addresses will be from] (example - 2001:db8:acad:10::/64)
 
 dns-server 2001:db8:acad::254 (this address can be whatever)
 
