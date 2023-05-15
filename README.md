@@ -39,9 +39,9 @@ if you have switch 3rd layer - switchport trunk encapsulation dot1q
 set native vlan for trunking - switchport trunk native vlan [id of vlan]
 
 ## Router-on-stick
-Create subinterfaces on router (done on a interface g0/1):
+Create subinterfaces on router:
 
-Example for vlans 10, 99 (native)
+Example for vlans 10, 99 (native) on g0/1
 
 int g0/1.10
 
